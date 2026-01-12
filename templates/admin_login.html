@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Título da aba do navegador -->
+    <title>Login Admin</title>
+</head>
+<body>
+
+<!-- Título da página -->
+<h2>Área Administrativa</h2>
+
+<!-- 
+    Se existir a variável "erro" enviada pelo Flask,
+    exibe a mensagem em vermelho
+-->
+{% if erro %}
+<p style="color:red;">{{ erro }}</p>
+{% endif %}
+
+<!-- 
+    Formulário de login
+    method="post" → envia os dados para a rota /admin/login
+-->
+<form method="post">
+
+    <!-- Campo de usuário -->
+    <label>Usuário:</label><br>
+    <input 
+        type="text" 
+        name="usuario" 
+        required
+    >
+    <br><br>
+
+    <!-- Campo de senha -->
+    <label>Senha:</label><br>
+    <input 
+        type="password" 
+        name="senha" 
+        required
+    >
+    <br><br>
+
+    <!-- Botão para enviar o formulário -->
+    <button type="submit">Entrar</button>
+
+</form>
+
+</body>
+</html>

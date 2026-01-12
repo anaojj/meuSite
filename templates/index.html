@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===== SEÇÃO HERO / BANNER PRINCIPAL ===== -->
+<section class="hero">
+
+    <div class="hero-texto">
+        <h2>Acessórios e tecnologia para o seu dia a dia</h2>
+        <p>Capinhas, fones, carregadores e muito mais, com qualidade e confiança.</p>
+
+        <a href="/produtos" class="botao-hero">
+            Ver produtos
+        </a>
+    </div>
+
+</section>
+
+<!-- ===== BANNER DE PROMOÇÃO (CONDICIONAL) ===== -->
+{% if promocao.ativo %}
+<section class="banner-promocao">
+    <h2>{{ promocao.titulo }}</h2>
+    <p>{{ promocao.descricao }}</p>
+
+    <a href="/produtos" class="botao-promocao">
+        Aproveitar agora
+    </a>
+</section>
+{% endif %}
+
+<!-- ===== SEÇÃO DE CATEGORIAS ===== -->
+<section class="categorias">
+
+    <h2>Categorias</h2>
+
+    <div class="lista-categorias">
+
+        <a href="#" class="categoria">
+            <img src="{{ url_for('static', filename='imagens/categorias/fone.png') }}" alt="Fones">
+            <span>Fones</span>
+        </a>
+
+        <a href="#" class="categoria">
+            <img src="{{ url_for('static', filename='imagens/categorias/carregador.png') }}" alt="Carregadores">
+            <span>Carregadores</span>
+        </a>
+
+        <a href="#" class="categoria">
+            <img src="{{ url_for('static', filename='imagens/categorias/capinha.png') }}" alt="Capinhas">
+            <span>Capinhas</span>
+        </a>
+
+        <a href="#" class="categoria">
+            <img src="{{ url_for('static', filename='imagens/categorias/smartwatch.png') }}" alt="Smartwatch">
+            <span>Smartwatch</span>
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

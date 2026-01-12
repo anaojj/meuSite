@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Título da aba do navegador -->
+    <title>Painel de Promoções</title>
+
+    <!-- BOTÃO DE LOGOUT -->
+<a href="/admin/logout" style="
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+">
+    Sair
+</a>
+
+    <!-- Estilo simples só para o painel admin -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        button {
+            background-color: #F2B705;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .secao {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TÍTULO PRINCIPAL DO PAINEL -->
+    <h1>Painel de Promoções</h1>
+
+    <!-- FORMULÁRIO PRINCIPAL -->
+    <!-- Envia os dados para /admin/promocoes -->
+    <form method="POST">
+
+        <!-- ================================ -->
+        <!-- PROMOÇÃO DA SEMANA -->
+        <!-- ================================ -->
+        <div class="secao">
+
+            <h2>Promoção da Semana</h2>
+
+            <!-- Checkbox para ativar/desativar -->
+            <label>
+                <input
+                    type="checkbox"
+                    name="promo_ativo"
+                    {% if dados.promocao.ativo %}checked{% endif %}
+                >
+                Ativar promoção da semana
+            </label>
+
+            <br><br>
+
+            <!-- Campo título -->
+            <label>Título da promoção</label>
+            <input
+                type="text"
+                name="promo_titulo"
+                value="{{ dados.promocao.titulo }}"
+            >
+
+            <!-- Campo descrição -->
+            <label>Descrição da promoção</label>
+            <textarea
+                name="promo_descricao"
+            >{{ dados.promocao.descricao }}</textarea>
+
+        </div>
+
+        <!-- ================================ -->
+        <!-- PROMOÇÃO DE FIM DE SEMANA -->
+        <!-- ================================ -->
+        <div class="secao">
+
+            <h2>Promoção de Fim de Semana</h2>
+
+            <!-- Checkbox para ativar/desativar -->
+            <label>
+                <input
+                    type="checkbox"
+                    name="fds_ativo"
+                    {% if dados.promofds.ativo %}checked{% endif %}
+                >
+                Ativar promoção de fim de semana
+            </label>
+
+            <br><br>
+
+            <!-- Campo título -->
+            <label>Título da promoção</label>
+            <input
+                type="text"
+                name="fds_titulo"
+                value="{{ dados.promofds.titulo }}"
+            >
+
+            <!-- Campo descrição -->
+            <label>Descrição da promoção</label>
+            <textarea
+                name="fds_descricao"
+            >{{ dados.promofds.descricao }}</textarea>
+
+        </div>
+
+        <!-- BOTÃO PARA SALVAR -->
+        <button type="submit">
+            Salvar promoções
+        </button>
+
+    </form>
+
+</body>
+</html>

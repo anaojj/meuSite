@@ -1,0 +1,23 @@
+{
+    "promocao": {
+        "titulo": "Promoções da Semana 🔥",
+        "descricao": "Até 20% OFF em acessórios selecionados!",
+        "ativo": true,
+        "dias_semana": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    "promofds": {
+        "titulo": "Promoção de Fim de Semana ⚡",
+        "descricao": "Descontos especiais só sábado e domingo!",
+        "ativo": false,
+        "dias_semana": [
+            5,
+            6
+        ]
+    }
+}

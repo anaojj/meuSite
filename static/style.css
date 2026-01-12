@@ -1,0 +1,222 @@
+/* ===== RESET / BASE ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #1F1F1F;
+}
+
+/* ===== TOPO (BANNER + NOME DA LOJA) ===== */
+.topo {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+/* Banner grande */
+.banner {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Nome da loja abaixo do banner */
+.titulo-loja {
+    margin: 15px 0 25px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1F1F1F;
+}
+
+/* ===== CONTEÚDO ===== */
+.conteudo {
+    padding: 30px;
+}
+
+/* ===== PRODUTOS ===== */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.produto:hover {
+    transform: scale(1.03);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Preço */
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 10px 0;
+}
+
+/* Botão (WhatsApp / Comprar) */
+.botao {
+    display: inline-block;
+    background-color: #F2B705;
+    color: #1F1F1F;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ===== HERO / PÁGINA INICIAL ===== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza o conteúdo horizontalmente */
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #FFF7D6;
+    border-radius: 16px;
+}
+
+.hero-texto {
+    text-align: center;
+}
+
+.hero-texto h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+
+.hero-texto p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.botao-hero {
+    background-color: #F2B705;
+    color: #1F1F1F;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.hero-imagem {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-imagem img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: #1F1F1F;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== RESPONSIVO (CELULAR) ===== */
+@media (max-width: 768px) {
+    .hero-texto {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .produtos {
+        justify-content: center;
+    }
+}
+/* ===== CATEGORIAS ===== */
+.categorias {
+    margin: 40px 0;
+}
+
+.categorias h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lista-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.categoria {
+    width: 120px;
+    background-color: #FFF7D6;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #1F1F1F;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.categoria img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.categoria span {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+.banner-promocao {
+    background-color: #F2B705;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.banner-promocao h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.botao-promocao {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}

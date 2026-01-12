@@ -1,0 +1,21 @@
+@app.route("/admin/criar", methods=["GET", "POST"])
+def admin_criar():
+
+    admin = carregar_admin()
+
+    # Impede criar novamente
+    if admin["criado"]:
+        return "Admin já criado", 403
+
+    if request.method == "POST":
+
+        admin["usuario"] = request.form.get("usuario")
+        admin["senha"] = request.form.get("senha")
+        admin["telefone"] = request.form.get("telefone")
+        admin["criado"] = True
+
+        salvar_admin(admin)
+
+        return redirect("/admin/login")
+
+    return render_template("admin_criar.html")

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Produtos</h2>
+
+<div class="produtos">
+    {% for produto in produtos %}
+    <div class="produto">
+        <img src="/static/imagens/{{ produto.imagem }}" alt="{{ produto.nome }}">
+
+        <h3>{{ produto.nome }}</h3>
+
+        <p class="descricao">
+            {{ produto.descricao }}
+        </p>
+
+        <p class="preco">
+        R$ {{ "{:,.2f}".format(produto.preco).replace(",", "X").replace(".", ",").replace("X", ".") }} à vista
+        </p>
+
+        <a class="botao"
+           href="https://wa.me/559999999999?text=Olá!%20Tenho%20interesse%20no%20produto:%20{{ produto.nome }}"
+           target="_blank">
+           Comprar no WhatsApp
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nome": "Samsung A07",
+    "preco": 989.10,
+    "descricao": "O Galaxy A07 combina conforto, estilo com design slim de 7,6 mm e opções de cores que combinam com você: Preto, Verde e Violeta. Além de muita memória: Até 8GB de memória + 256 de armazenamento",
+    "imagem": "capinha.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Carregador rápido",
+    "preco": 59.90,
+    "descricao": "Carregador turbo com tecnologia de carregamento rápido.",
+    "imagem": "carregador.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Fone Bluetooth",
+    "preco": 129.90,
+    "descricao": "Fone sem fio com ótima qualidade de som e bateria de longa duração.",
+    "imagem": "fone.jpg"
+  }
+]
